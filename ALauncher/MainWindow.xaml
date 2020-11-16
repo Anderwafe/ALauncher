@@ -6,14 +6,63 @@
         xmlns:local="clr-namespace:ALauncher"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="500" MinWidth="800"
-        AllowsTransparency="True" 
+        AllowsTransparency="True" x:Name="wnwMainWindow" 
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None">
+        WindowStyle="None"
+        Background="#1e1c1d"
+        Foreground="#d1d1d2">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="FirstRow" Height="{Binding ElementName=Menu, Path=Height}"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Border x:Name="BorderWindow"
                 BorderThickness="3"
-                BorderBrush="Black"/>
-        <Menu Height="18" HorizontalAlignment="Stretch"
-              VerticalAlignment="Top"/>
+                BorderBrush="#000000"
+                Grid.RowSpan="1000"
+                Grid.ColumnSpan="1000"/>
+        <Menu   x:Name="Menu"
+                Grid.Row="0"
+                Grid.ColumnSpan="30"
+                Height="28" 
+                VerticalAlignment="Top"
+                Background="#000000"
+                Foreground="#d1d1d2"
+                BorderBrush="Transparent"
+                Margin="3 3 3 0">
+        </Menu>
+        <WrapPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Panel.ZIndex="10"
+                        
+                        Margin="3 3 3 0"
+                        VerticalAlignment="Stretch">
+            <Button x:Name="btnCollapse" 
+                    Width="30"
+                    Content="—"
+                    Background="Transparent"
+                    Foreground="#d1d1d2"
+                    FontSize="15"
+                    BorderThickness="0"
+                    Height="{Binding ElementName=FirstRow, Path=Height}"></Button>
+            <Button x:Name="btnMaximize" 
+                    Width="30"
+                    Content="▭"
+                    Background="Transparent"
+                    Foreground="#d1d1d2"
+                    FontSize="15"
+                    BorderThickness="0"
+                    Height="{Binding ElementName=FirstRow, Path=Height}"></Button>
+            <Button x:Name="btnExit" 
+                    Width="30" 
+                    Content="X"
+                    Background="Transparent"
+                    Foreground="#d1d1d2"
+                    BorderThickness="0"
+                    Height="{Binding ElementName=FirstRow, Path=Height}"></Button>
+        </WrapPanel>
     </Grid>
 </Window>

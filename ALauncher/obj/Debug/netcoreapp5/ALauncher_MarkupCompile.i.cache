@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Projects\ALauncher\ALauncher\obj\Debug\netcoreapp3.1\
+E:\Projects\ALauncher\ALauncher\obj\Debug\netcoreapp5\
 ALauncher
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 E:\Projects\ALauncher\ALauncher\App.xaml
 11151548125
 
-5-1284764974
-1921654412462
+52055725014
+193582816078
 MainWindow.xaml;
 
-True
+False
 

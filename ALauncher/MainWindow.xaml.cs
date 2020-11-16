@@ -23,6 +23,50 @@ namespace ALauncher
         public MainWindow()
         {
             InitializeComponent();
+
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
+
+            Menu.MouseDown += (s, e) =>
+            {
+                DragMove();
+            };
+
+            wnwMainWindow.MouseDown += (s, e) =>
+            {
+                DragMove();
+            };
+
+            CommandBinding cb = new();
+
+            btnExit.Command = SystemCommands.CloseWindowCommand;
+            cb.Command = SystemCommands.CloseWindowCommand;
+            cb.Executed += (s, e) =>
+            {
+                this.Close();
+            };
+            btnExit.CommandBindings.Add(cb);
+
+            cb = new();
+            btnMaximize.Command = SystemCommands.MaximizeWindowCommand;
+            cb.Command = SystemCommands.MaximizeWindowCommand;
+            cb.Executed += (s, e) =>
+            {
+                if (this.WindowState == WindowState.Maximized)
+                    this.WindowState = WindowState.Normal;
+                else
+                    this.WindowState = WindowState.Maximized;
+            };
+            btnMaximize.CommandBindings.Add(cb);
+
+            cb = new();
+            btnCollapse.Command = SystemCommands.MinimizeWindowCommand;
+            cb.Command = SystemCommands.MinimizeWindowCommand;
+            cb.Executed += (s, e) =>
+            {
+                this.WindowState = WindowState.Minimized;
+            };
+            btnCollapse.CommandBindings.Add(cb);
         }
     }
 }
