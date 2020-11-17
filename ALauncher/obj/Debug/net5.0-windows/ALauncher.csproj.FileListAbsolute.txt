@@ -19,3 +19,4 @@ E:\Projects\ALauncher\ALauncher\obj\Debug\net5.0-windows\ALauncher.dll
 E:\Projects\ALauncher\ALauncher\obj\Debug\net5.0-windows\ref\ALauncher.dll
 E:\Projects\ALauncher\ALauncher\obj\Debug\net5.0-windows\ALauncher.pdb
 E:\Projects\ALauncher\ALauncher\obj\Debug\net5.0-windows\ALauncher.genruntimeconfig.cache
+E:\Projects\ALauncher\ALauncher\obj\Debug\net5.0-windows\ALauncher.csprojAssemblyReference.cache

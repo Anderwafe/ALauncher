@@ -64,5 +64,11 @@
                     BorderThickness="0"
                     Height="{Binding ElementName=FirstRow, Path=Height}"></Button>
         </WrapPanel>
+        <WrapPanel x:Name="AppList"
+                   Orientation="Horizontal" 
+                   Margin="20"
+                   Grid.Row="1">
+            
+        </WrapPanel>
     </Grid>
 </Window>

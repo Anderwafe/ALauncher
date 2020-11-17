@@ -27,6 +27,8 @@ namespace ALauncher
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
             this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
 
+            #region UI settings
+
             Menu.MouseDown += (s, e) =>
             {
                 DragMove();
@@ -67,6 +69,10 @@ namespace ALauncher
                 this.WindowState = WindowState.Minimized;
             };
             btnCollapse.CommandBindings.Add(cb);
+
+            #endregion
+
+
         }
     }
 }
