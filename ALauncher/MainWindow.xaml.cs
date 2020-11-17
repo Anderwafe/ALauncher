@@ -29,6 +29,18 @@ namespace ALauncher
 
             #region UI settings
 
+            btnApp.MouseEnter += (s, e) =>
+            {
+                btnApp.Background = Brushes.Blue;
+                btnApp.Foreground = Brushes.Black;
+            };
+
+            btnApp.MouseLeave += (s, e) =>
+            {
+                btnApp.Background = Brushes.Transparent;
+                btnApp.Foreground = Brushes.White;
+            };
+
             Menu.MouseDown += (s, e) =>
             {
                 DragMove();

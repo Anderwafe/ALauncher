@@ -64,11 +64,46 @@
                     BorderThickness="0"
                     Height="{Binding ElementName=FirstRow, Path=Height}"></Button>
         </WrapPanel>
-        <WrapPanel x:Name="AppList"
-                   Orientation="Horizontal" 
-                   Margin="20"
-                   Grid.Row="1">
-            
+        <WrapPanel x:Name="AppList" 
+                 Grid.Row="1"
+                 Orientation="Horizontal"
+                 Margin="20"
+                 Background="{Binding ElementName=wnwMainWindow, Path=Background}">
+            <Border Height="250" Width="150"
+                    Margin="10 10 5 10">
+                <StackPanel Orientation="Vertical">
+                    <Image Height="100" 
+                           Width="100"
+                           Margin="0 10 0 0"
+                           Source="0ch2BOhPSGc.jpg"></Image>
+                    <Label Background="#0000"
+                             Foreground="#FFFFFF"
+                             HorizontalAlignment="Center"
+                             FontSize="15"
+                             BorderThickness="0"
+                             Content="QR-Code"></Label>
+                    <Label Background="#0000"
+                           Foreground="#FFFFFF"
+                           HorizontalAlignment="Center"
+                           BorderThickness="0"
+                           Margin="5 -5 5 10"
+                           MaxHeight="60"
+                           FontWeight="ExtraLight">
+                        <Label.Content>
+                            <AccessText TextWrapping="Wrap" Text="AaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaxxxx"/>
+                        </Label.Content>
+                    </Label>
+                    <Button x:Name="btnApp"
+                            Height="40" Width="120" 
+                            Background="#0000"
+                            Foreground="#FFFFFF"
+                            Content="Download"
+                            FontSize="15"
+                            
+                            BorderThickness="0"
+                            ></Button>
+                </StackPanel>
+            </Border>
         </WrapPanel>
     </Grid>
 </Window>
