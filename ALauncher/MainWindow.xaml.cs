@@ -29,29 +29,41 @@ namespace ALauncher
 
             #region UI settings
 
-            btnApp.MouseEnter += (s, e) =>
+            SecApp.MouseEnter += (s, e) =>
             {
-                btnApp.Background = Brushes.Blue;
-                btnApp.Foreground = Brushes.Black;
+                SecApp.Background = Brushes.Gray;
+
             };
 
-            btnApp.MouseLeave += (s, e) =>
+            SecApp.MouseLeave += (s, e) =>
             {
-                btnApp.Background = Brushes.Transparent;
-                btnApp.Foreground = Brushes.White;
+                SecApp.Background = Brushes.Transparent;
             };
 
-            Menu.MouseDown += (s, e) =>
-            {
-                DragMove();
-            };
-
-            wnwMainWindow.MouseDown += (s, e) =>
+            wnwMainWindow.MouseLeftButtonDown += (s, e) =>
             {
                 DragMove();
             };
 
-            CommandBinding cb = new();
+            btnExit.Click += (s, e) =>
+            {
+                this.Close();
+            };
+
+            btnCollapse.Click += (s, e) =>
+            {
+                this.WindowState = WindowState.Minimized;
+            };
+
+            btnMaximize.Click += (s, e) =>
+            {
+                if (this.WindowState == WindowState.Maximized)
+                    this.WindowState = WindowState.Normal;
+                else
+                    this.WindowState = WindowState.Maximized;
+            };
+
+            /*CommandBinding cb = new();
 
             btnExit.Command = SystemCommands.CloseWindowCommand;
             cb.Command = SystemCommands.CloseWindowCommand;
@@ -80,7 +92,7 @@ namespace ALauncher
             {
                 this.WindowState = WindowState.Minimized;
             };
-            btnCollapse.CommandBindings.Add(cb);
+            btnCollapse.CommandBindings.Add(cb);*/
 
             #endregion
 

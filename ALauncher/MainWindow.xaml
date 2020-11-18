@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ALauncher"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="500" MinWidth="800"
-        AllowsTransparency="True" x:Name="wnwMainWindow" 
+        x:Name="wnwMainWindow" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="#1e1c1d"
@@ -69,13 +69,16 @@
                  Orientation="Horizontal"
                  Margin="20"
                  Background="{Binding ElementName=wnwMainWindow, Path=Background}">
-            <Border Height="250" Width="150"
-                    Margin="10 10 5 10">
-                <StackPanel Orientation="Vertical">
+            <Border x:Name="SecApp"
+                    Background="#0000"
+                    Margin="10 10 5 10"
+                    Width="150">
+                <StackPanel>
+
                     <Image Height="100" 
                            Width="100"
                            Margin="0 10 0 0"
-                           Source="0ch2BOhPSGc.jpg"></Image>
+                           Source="pack://application:,,,/1.jpg"></Image>
                     <Label Background="#0000"
                              Foreground="#FFFFFF"
                              HorizontalAlignment="Center"
@@ -93,15 +96,6 @@
                             <AccessText TextWrapping="Wrap" Text="AaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaxxxx"/>
                         </Label.Content>
                     </Label>
-                    <Button x:Name="btnApp"
-                            Height="40" Width="120" 
-                            Background="#0000"
-                            Foreground="#FFFFFF"
-                            Content="Download"
-                            FontSize="15"
-                            
-                            BorderThickness="0"
-                            ></Button>
                 </StackPanel>
             </Border>
         </WrapPanel>
