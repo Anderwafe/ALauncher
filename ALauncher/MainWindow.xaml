@@ -9,6 +9,7 @@
         x:Name="wnwMainWindow" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        ResizeMode="NoResize"
         Background="#1e1c1d"
         Foreground="#d1d1d2">
     <Grid>
@@ -70,8 +71,8 @@
                  Margin="20"
                  Background="{Binding ElementName=wnwMainWindow, Path=Background}">
             <Border x:Name="SecApp"
-                    Background="#0000"
                     Margin="10 10 5 10"
+                    Background="#0000"
                     Width="150">
                 <StackPanel>
 

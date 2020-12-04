@@ -7,7 +7,8 @@
     },
     "additionalProbingPaths": [
       "C:\\Users\\Anderwafe\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Anderwafe\\.nuget\\packages"
+      "C:\\Users\\Anderwafe\\.nuget\\packages",
+      "E:\\Microsoft\\Xamarin\\NuGet"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

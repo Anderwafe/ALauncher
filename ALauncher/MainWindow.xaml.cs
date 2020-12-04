@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -32,7 +33,6 @@ namespace ALauncher
             SecApp.MouseEnter += (s, e) =>
             {
                 SecApp.Background = Brushes.Gray;
-
             };
 
             SecApp.MouseLeave += (s, e) =>
@@ -62,37 +62,6 @@ namespace ALauncher
                 else
                     this.WindowState = WindowState.Maximized;
             };
-
-            /*CommandBinding cb = new();
-
-            btnExit.Command = SystemCommands.CloseWindowCommand;
-            cb.Command = SystemCommands.CloseWindowCommand;
-            cb.Executed += (s, e) =>
-            {
-                this.Close();
-            };
-            btnExit.CommandBindings.Add(cb);
-
-            cb = new();
-            btnMaximize.Command = SystemCommands.MaximizeWindowCommand;
-            cb.Command = SystemCommands.MaximizeWindowCommand;
-            cb.Executed += (s, e) =>
-            {
-                if (this.WindowState == WindowState.Maximized)
-                    this.WindowState = WindowState.Normal;
-                else
-                    this.WindowState = WindowState.Maximized;
-            };
-            btnMaximize.CommandBindings.Add(cb);
-
-            cb = new();
-            btnCollapse.Command = SystemCommands.MinimizeWindowCommand;
-            cb.Command = SystemCommands.MinimizeWindowCommand;
-            cb.Executed += (s, e) =>
-            {
-                this.WindowState = WindowState.Minimized;
-            };
-            btnCollapse.CommandBindings.Add(cb);*/
 
             #endregion
 

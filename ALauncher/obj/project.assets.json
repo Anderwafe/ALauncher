@@ -8,7 +8,8 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Anderwafe\\.nuget\\packages\\": {}
+    "C:\\Users\\Anderwafe\\.nuget\\packages\\": {},
+    "E:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -19,9 +20,13 @@
       "packagesPath": "C:\\Users\\Anderwafe\\.nuget\\packages\\",
       "outputPath": "E:\\Projects\\ALauncher\\ALauncher\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\Anderwafe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
